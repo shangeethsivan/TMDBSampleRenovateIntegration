@@ -1,0 +1,38 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    "group:all",
+    ":dependencyDashboard",
+    "schedule:daily"
+  ],
+  "gitAuthor": "Renovate Bot Self Hosted <renovate@testing.com>",
+  "baseBranches": [
+    "master"
+  ],
+  "githubTokenWarn": false,
+  "repositories": [
+    "shangeethsivan/TMDBSample"
+  ],
+  "commitMessageExtra": "{{{currentValue}}} to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}{{prettyNewMajor}}{{else}}{{#if isSingleVersion}}{{prettyNewVersion}}{{else}}{{#if newValue}}{{{newValue}}}{{else}}{{{newDigestShort}}}{{/if}}{{/if}}{{/if}}{{/if}}",
+  "packageRules": [
+    {
+      "groupName": "kotlin",
+      "matchPackageNames": [
+        "/androidx.compose.compiler:compiler/"
+      ]
+    },
+    {
+      "groupName": "kotlin",
+      "matchPackageNames": [
+        "/org.jetbrains.kotlin.*/"
+      ]
+    },
+    {
+      "groupName": "kotlin",
+      "matchPackageNames": [
+        "/com.google.devtools.ksp/"
+      ]
+    }
+  ]
+}

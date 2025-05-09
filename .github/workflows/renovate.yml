@@ -1,0 +1,21 @@
+name: Renovate SelfHosted
+on:
+  workflow_dispatch: # Allows manual triggering from the Actions tab
+  schedule:
+    # Configure your desired schedule. This example runs daily at 3:00 AM UTC.
+    # Use crontab syntax: https://crontab.guru/
+    - cron: '0 3 * * *'
+
+jobs:
+  renovate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+      - name: Self-hosted Renovate
+        uses: renovatebot/github-action@v42.0.1
+        with:
+          configurationFile: renovate.json
+          token: ${{ secrets.RENOVATE_TOKEN }}
+        env:
+          LOG_LEVEL: "debug"
