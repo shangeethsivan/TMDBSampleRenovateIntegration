@@ -1,0 +1,89 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdk 33
+    namespace 'com.example.tmdb'
+
+    defaultConfig {
+        applicationId "com.example.tmdb"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+
+        buildConfigField "String", "TMDB_API_KEY", "\"${project.findProperty('TMDB_API_KEY') ?: 'your_api_key_here'}\""
+        buildConfigField "String", "TMDB_BASE_URL", "\"https://api.themoviedb.org/3/\""
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+        freeCompilerArgs += [
+            "-Xjvm-default=all",
+            "-opt-in=kotlin.RequiresOptIn"
+        ]
+    }
+    buildFeatures {
+        compose true
+        buildConfig true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion libs.versions.compose.get()
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+    // Core Android dependencies
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.lifecycle.runtime.ktx
+    implementation libs.androidx.activity.compose
+
+    // Compose
+    implementation libs.bundles.compose
+
+    // Navigation
+    implementation libs.navigation.compose
+
+    // Room Database
+    implementation libs.bundles.room
+    kapt libs.room.compiler
+
+    // Retrofit for API calls
+    implementation libs.bundles.retrofit
+
+    // Coil for image loading
+    implementation libs.coil.compose
+
+    // Coroutines
+    implementation libs.kotlinx.coroutines.android
+
+    // Testing
+    testImplementation libs.junit
+    androidTestImplementation libs.androidx.test.ext
+    androidTestImplementation libs.androidx.test.espresso
+    androidTestImplementation libs.compose.ui.test.junit4
+    debugImplementation libs.bundles.compose.debug
+}

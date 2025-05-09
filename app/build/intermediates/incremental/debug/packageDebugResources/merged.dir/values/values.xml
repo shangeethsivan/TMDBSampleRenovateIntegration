@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="add_to_favorites">Add to Favorites</string>
+    <string name="app_name">TMDB</string>
+    <string name="favorites">Favorites</string>
+    <string name="movie_details">Movie Details</string>
+    <string name="no_favorites">No favorites yet. Browse movies and add some!</string>
+    <string name="overview">Overview</string>
+    <string name="rating">Rating: %1$s</string>
+    <string name="release_date">Release Date: %1$s</string>
+    <string name="remove_from_favorites">Remove from Favorites</string>
+    <style name="Theme.TMDB" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">@android:color/black</item>
+    </style>
+</resources>

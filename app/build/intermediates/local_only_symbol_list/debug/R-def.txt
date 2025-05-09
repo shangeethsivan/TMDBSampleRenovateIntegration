@@ -1,0 +1,13 @@
+R_DEF: Internal format may change without notice
+local
+drawable ic_launcher
+string add_to_favorites
+string app_name
+string favorites
+string movie_details
+string no_favorites
+string overview
+string rating
+string release_date
+string remove_from_favorites
+style Theme.TMDB
