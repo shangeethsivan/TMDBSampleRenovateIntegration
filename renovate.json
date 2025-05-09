@@ -17,20 +17,12 @@
   "commitMessageExtra": "{{{currentValue}}} to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}{{prettyNewMajor}}{{else}}{{#if isSingleVersion}}{{prettyNewVersion}}{{else}}{{#if newValue}}{{{newValue}}}{{else}}{{{newDigestShort}}}{{/if}}{{/if}}{{/if}}{{/if}}",
   "packageRules": [
     {
+      "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest"],
+      "automerge": false,
       "groupName": "kotlin",
       "matchPackageNames": [
-        "/androidx.compose.compiler:compiler/"
-      ]
-    },
-    {
-      "groupName": "kotlin",
-      "matchPackageNames": [
-        "/org.jetbrains.kotlin.*/"
-      ]
-    },
-    {
-      "groupName": "kotlin",
-      "matchPackageNames": [
+        "/androidx.compose.compiler:compiler/",
+        "/org.jetbrains.kotlin.*/",
         "/com.google.devtools.ksp/"
       ]
     }
