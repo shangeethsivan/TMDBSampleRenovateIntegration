@@ -4,7 +4,7 @@ kotlin = "1.8.0"
 android-gradle-plugin = "8.0.0"
 
 # Dependencies
-compose = "1.4.0"
+compose = "1.8.1"
 room = "2.5.1"
 retrofit = "2.9.0"
 nav = "2.5.3"
