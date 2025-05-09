@@ -1,6 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    "config:recommended",
+  ],
+  "baseBranches": [
+    "main"
+  ],
+  "repositories": [
+    "shangeethsivan/TMDBSample"
   ]
 }
