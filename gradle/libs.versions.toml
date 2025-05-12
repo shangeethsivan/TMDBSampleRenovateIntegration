@@ -1,7 +1,7 @@
 [versions]
 # Plugins
 kotlin = "1.8.0"
-android-gradle-plugin = "8.0.0"
+android-gradle-plugin = "8.10.0"
 
 # Dependencies
 compose = "1.4.0"
