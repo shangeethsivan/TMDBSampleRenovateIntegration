@@ -3,9 +3,6 @@
   "extends": [
     "config:recommended"
   ],
-  "baseBranches": [
-    "main"
-  ],
   "repositories": [
     "shangeethsivan/TMDBSampleRenovateIntegration"
   ],
