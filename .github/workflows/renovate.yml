@@ -12,12 +12,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.2.2
         with:
-          ref: ${{ github.ref_name }}
+          ref: ${{ github.head_ref }}
+
 
       - name: Get current branch
         id: vars
-        run: echo "BRANCH_NAME=${GITHUB_REF##*/}" >> $GITHUB_OUTPUT
-        
+        run: echo "BRANCH_NAME=${{ github.head_ref }}" >> $GITHUB_OUTPUT
+
       - name: Print current branch
         run: echo "Current branch name:${{ steps.vars.outputs.BRANCH_NAME }}"
         
