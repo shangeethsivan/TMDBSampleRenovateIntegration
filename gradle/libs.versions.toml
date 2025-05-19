@@ -6,7 +6,7 @@ android-gradle-plugin = "8.10.0"
 # Dependencies
 compose = "1.4.0"
 room = "2.7.1"
-retrofit = "2.11.0"
+retrofit = "2.12.0"
 nav = "2.9.0"
 core-ktx = "1.16.0"
 lifecycle-runtime-ktx = "2.9.0"
