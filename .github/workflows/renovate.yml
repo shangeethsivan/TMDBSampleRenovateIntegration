@@ -1,7 +1,7 @@
 name: Renovate SelfHosted
 on:
   workflow_dispatch: # Allows manual triggering from the Actions tab
-  push:
+  create:
     branches:
       - 'rel/**'
 
