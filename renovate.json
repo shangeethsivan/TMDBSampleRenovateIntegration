@@ -6,7 +6,6 @@
     "repositories": [
         "shangeethsivan/TMDBSampleRenovateIntegration"
     ],
-    "baseBranches": ["/^rel\\/.*/"],
     "prBodyNotes": [
         "# Yay! Looks like we have a new dependency update! :fire: \n\n  Before we go ahead, please go through the below list  \n\n  - [ ] Create a Jira Ticket and add this PR link to the ticket along with fix version!\n  - [ ] Add ticket number in the PR title\n  - [ ] Add all the possible flows that can be affected by this update in the ticket test notes\n  - [ ] Update PR to point to the rel branch\n  - [ ] Did you manual test the code flow?  \n  - [ ] Did you review the code yourself?   \n  - [ ] Did you check the base branch and Jira ticket fix version?\n\n  ### :fireworks: If you are done with these, Congratulations! :fireworks:  \n  ---"
     ]
