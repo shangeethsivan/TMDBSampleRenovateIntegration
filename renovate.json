@@ -6,5 +6,20 @@
   "repositories": [
     "shangeethsivan/TMDBSampleRenovateIntegration"
   ],
-  "gitAuthor": "RenovateBot <renovate-goshposh@goshd.com>"
+  "prBodyNotes":[
+    "# Yay! Looks like we have a new dependency update! :fire:   
+  
+Before we go ahead, please go through the below list  
+
+- [ ] Create a Jira Ticket and add this PR link to the ticket along with fix version!     
+- [ ] Add all the possible flows that can be affected by this update in the ticket test notes
+- [ ] Update PR to point to the rel branch
+- [ ] Did you manual test the code flow?  
+- [ ] Did you review the code yourself?   
+- [ ] Did you check the base branch and Jira ticket fix version?
+
+### :fireworks: If you are done with these, Congratulations! :fireworks:  
+---
+  "
+  ]
 }
