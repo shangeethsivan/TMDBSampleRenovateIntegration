@@ -20,7 +20,7 @@ jobs:
         run: echo "BRANCH_NAME=${{ github.head_ref }}" >> $GITHUB_OUTPUT
 
       - name: Print current branch
-        run: echo "Current branch name:${{ steps.vars.outputs.BRANCH_NAME }}"
+        run: echo "Current branch name:${{ steps.vars.outputs.BRANCH_NAME }} ,, ${{ github.ref_name }}"
         
       - name: Self-hosted Renovate
         uses: renovatebot/github-action@v42.0.2
