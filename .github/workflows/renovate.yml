@@ -11,16 +11,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.2
-        with:
-          ref: ${{ github.head_ref }}
-
-
-      - name: Get current branch
-        id: vars
-        run: echo "BRANCH_NAME=${{ github.head_ref }}" >> $GITHUB_OUTPUT
-
-      - name: Print current branch
-        run: echo "Current branch name:${{ steps.vars.outputs.BRANCH_NAME }} ,, ${{ github.ref_name }}"
         
       - name: Self-hosted Renovate
         uses: renovatebot/github-action@v42.0.2
@@ -29,4 +19,4 @@ jobs:
           token: ${{ secrets.RENOVATE_TOKEN }}
         env:
           LOG_LEVEL: "debug"
-          RENOVATE_BASE_BRANCHES: ${{ steps.vars.outputs.BRANCH_NAME }}
+          RENOVATE_BASE_BRANCHES: ${{ github.ref_name }}
